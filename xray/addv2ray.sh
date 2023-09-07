@@ -16,14 +16,16 @@ MYIP=$(wget -qO- icanhazip.com);
 IZIN=$( curl https://anuy639.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp : https://wa.me/6285349326511"
+echo -e "${NC}${LIGHT}WhatsApp : https://wa.me/6287728411949"
+echo -e "${NC}${LIGHT}Youtube : youtube.com/@anuy63"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
+echo -e "${NC}${LIGHT}Telegram : https;//t.me/anuybazoelk639"
 exit 0
 fi
 clear
@@ -89,24 +91,29 @@ rm -rf /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 service cron restart
 clear
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ XRAYS/VMESS ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ Remarks     : ${user}"
-echo -e "❇️ IP/Host     : ${MYIP}"
-echo -e "❇️ Address     : ${domain}"
-echo -e "❇️ Port TLS    : ${tls}"
-echo -e "❇️ Port No TLS : ${nontls}"
-echo -e "❇️ User ID     : ${uuid}"
-echo -e "❇️ Alter ID    : 0"
-echo -e "❇️ Security    : auto"
-echo -e "❇️ Network     : ws"
-echo -e "❇️ Path        : /"
-echo -e "❇️ Created     : $hariini"
-echo -e "❇️ Expired     : $exp"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m         Link TLS    : ${xrayv2ray1}          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m         Link No TLS    : ${xrayv2ray2}          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m		⇱ XRAYS/VMESS ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+echo -e "❇️ Remarks		: ${user}"
+echo -e "❇️ IP/Host		: ${MYIP}"
+echo -e "❇️ Address		: ${domain}"
+echo -e "❇️ Port TLS		: ${tls}"
+echo -e "❇️ Port No TLS		: ${nontls}"
+echo -e "❇️ User ID		: ${uuid}"
+echo -e "❇️ Alter ID		: 0 "
+echo -e "❇️ Security		: auto "
+echo -e "❇️ Network		: ws "
+echo -e "❇️ Path		: / "
+echo -e "❇️ Created		: $hariini "
+echo -e "❇️ Expired		: $exp "
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m	Link TLS	: ${xrayv2ray1}          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m	Link No TLS	: ${xrayv2ray2}          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "	whatsapp		: wa.me/6287728411949 "
+echo -e "	Telegram		: t.me/anuybazoelk "
+echo -e ""
