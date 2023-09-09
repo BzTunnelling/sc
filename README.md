@@ -9,12 +9,8 @@ Project Fog is a VPS AutoScript for Ubuntu and Debian Distros. Comes with pre-in
 - Ubuntu 18. 20
 - Debian 10
 
-
-
-###
-
 ## Installation
-
+ 
 _It will install the version of BZ TUNNELLING PROJECT™ that is compatible with your VPS's operating system and version._
 
 <p align="center">
@@ -31,7 +27,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 
     
     
-###Fitur Script
+## Fitur Script
 
 • SSH & OpenVPN
 
@@ -51,12 +47,14 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 
 • Restore Data ALL Service
 
-Os Supported
+## Os Supported
+
 • Debian 10 Only
 
 • Ubuntu 18.04 & 20.04 (Recommended)
 
-Service & Port
+
+## Service & Port
 • OpenSSH : 443, 22
 
 • OpenVPN : TCP 1194, UDP 2200, SSL 990
@@ -89,7 +87,7 @@ Service & Port
 
 • Trojan Go : 2087
 
-Server Information & Other Features
+## Server Information & Other Features
 • Timezone : Asia/Jakarta (GMT +7)
 
 • Fail2Ban : [ON]
