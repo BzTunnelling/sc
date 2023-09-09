@@ -13,7 +13,6 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m          ⇱ SCRIPT BY BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-sleep 5
 MYIP=$(wget -qO- icanhazip.com);
 IZIN=$( curl https://anuy639.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
@@ -40,7 +39,7 @@ echo -e "\E[44;1;39m		⇱ BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-mkdir /var/lib/akbarstorevpn;
+mkdir /var/lib/bztunnelling;
 echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 wget https://raw.githubusercontent.com/BzTunnelling/sc/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 #install v2ray
