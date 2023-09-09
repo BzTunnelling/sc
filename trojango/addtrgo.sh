@@ -12,25 +12,32 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
+export CHATID="923915481"
+export KEY="6100820648:AAH6m5Zo9P3X9CEAzUYjazrCac4g1tFa45A"
+export TIME="10"
+export URL="https://api.telegram.org/bot$KEY/sendMessage"
+clear
 MYIP=$(wget -qO- icanhazip.com);
 IZIN=$( curl https://anuy639.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Facebook	: https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp	: https://wa.me/6285349326511"
+echo -e "${NC}${LIGHT}WhatsApp	: https://wa.me/6287728411949"
+echo -e "${NC}${LIGHT}Youtube	: youtube.com/@anuy63"
+echo -e "${NC}${LIGHT}Telegram	: https://t.me/anuybazoelk"
+echo -e "${NC}${LIGHT}Telegram	: https;//t.me/anuybazoelk639"
 exit 0
 fi
 clear
 echo "Checking VPS"
 clear
 uuid=$(cat /etc/trojan-go/uuid.txt)
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/bztunnelling/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -55,10 +62,50 @@ echo -e "### $user $exp" >> /etc/trojan-go/akun.conf
 systemctl restart trojan-go.service
 link="trojan://${user}@${domain}:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#$user"
 clear
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g');
+d=$(( ${c} * 1024*1024*1024 ));
+
+if [[ ${c} != "0" ]]; then
+echo "${d}" > /etc/vmess/${user}
+fi
+DATADB=$(cat /etc/vmess/.vmess.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+if [[ "${DATADB}" != '' ]]; then
+  sed -i "/\b${user}\b/d" /etc/vmess/.vmess.db
+fi
+echo "### ${user} ${exp} ${uuid}" >>/etc/vmess/.vmess.db
+clear
+CHATID="$CHATID"
+KEY="$KEY"
+TIME="$TIME"
+URL="$URL"
+TEXT="<code>====================</code>
+<code>		TROGO</code>
+<code>====================</code>
+<code>Remarks	: ${user}
+Address    : ${domain}
+Port       : ${trgo}
+Key        : ${user}
+alterId   : 0
+Security  : auto
+network   : ws
+Path      : /trojango
+Name      : TROJAN-GO</code>
+<code>====================</code>
+<code> TROJAN-GO</code>
+<code>====================</code>
+<code>${link}</code>
+<code>====================</code>
+Dibuat Pada    : $hariini
+Berakhir Pada  : $exp
+echo -e "	whatsapp		: wa.me/6287728411949 "
+echo -e "	Telegram		: t.me/anuybazoelk "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+
+<code>====================</code>
 echo -e ""
 echo -e "=======-TROJAN-GO-======="
 echo -e "Remarks    : ${user}"
-echo -e "IP/Host    : ${MYIP}"
 echo -e "Address    : ${domain}"
 echo -e "Port       : ${trgo}"
 echo -e "Key        : ${user}"
@@ -69,4 +116,8 @@ echo -e "Expired    : $exp"
 echo -e "========================="
 echo -e "Link TrGo  : ${link}"
 echo -e "========================="
-echo -e "Script By Nyari Gratisan"
+echo -e "	whatsapp		: wa.me/6287728411949 "
+echo -e "	Telegram		: t.me/anuybazoelk "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+echo -e "Script By BZ TUNNELLING"
