@@ -40,7 +40,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 mkdir /var/lib/bztunnelling;
-echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
+echo "IP=" >> /var/lib/bztunnelling/ipvps.conf
 wget https://raw.githubusercontent.com/BzTunnelling/sc/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 #install v2ray
 echo -e ""
