@@ -73,10 +73,6 @@ if [[ "${DATADB}" != '' ]]; then
   sed -i "/\b${user}\b/d" /etc/trojan-go/.trojan-go.db
 fi
 echo "### ${user} ${exp} ${uuid}" >>/etc/trojan-ho/.trojan-go.db
-clear
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-echo ""
-clear
 CHATID="$CHATID"
 KEY="$KEY"
 TIME="$TIME"
@@ -103,7 +99,10 @@ Berakhir Pada  : $exp
 whatsapp	: wa.me/6287728411949
 Telegram	: t.me/anuybazoelk
 <code>====================</code>
-echo -e ""
+
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+echo ""
+clear
 echo -e "=======-TROJAN-GO-======="
 echo -e "Remarks	: ${user}"
 echo -e "Address	: ${domain}"
