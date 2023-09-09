@@ -62,17 +62,20 @@ echo -e "### $user $exp" >> /etc/trojan-go/akun.conf
 systemctl restart trojan-go.service
 link="trojan://${user}@${domain}:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#$user"
 clear
-c=$(echo "${Quota}" | sed 's/[^0-9]*//g');
-d=$(( ${c} * 1024*1024*1024 ));
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
+d=$((${c} * 1024 * 1024 * 1024))
 
 if [[ ${c} != "0" ]]; then
-echo "${d}" > /etc/vmess/${user}
+  echo "${d}" >/etc/trojan-go/${user}
 fi
-DATADB=$(cat /etc/vmess/.vmess.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+DATADB=$(cat /etc/trojan-go/.trojan-go.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
 if [[ "${DATADB}" != '' ]]; then
-  sed -i "/\b${user}\b/d" /etc/vmess/.vmess.db
+  sed -i "/\b${user}\b/d" /etc/trojan-go/.trojan-go.db
 fi
-echo "### ${user} ${exp} ${uuid}" >>/etc/vmess/.vmess.db
+echo "### ${user} ${exp} ${uuid}" >>/etc/trojan-ho/.trojan-go.db
+clear
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+echo ""
 clear
 CHATID="$CHATID"
 KEY="$KEY"
@@ -97,27 +100,24 @@ Name      : TROJAN-GO</code>
 <code>====================</code>
 Dibuat Pada    : $hariini
 Berakhir Pada  : $exp
-echo -e "	whatsapp		: wa.me/6287728411949 "
-echo -e "	Telegram		: t.me/anuybazoelk "
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-
+whatsapp	: wa.me/6287728411949
+Telegram	: t.me/anuybazoelk
 <code>====================</code>
 echo -e ""
 echo -e "=======-TROJAN-GO-======="
-echo -e "Remarks    : ${user}"
-echo -e "Address    : ${domain}"
-echo -e "Port       : ${trgo}"
-echo -e "Key        : ${user}"
-echo -e "Encryption : none"
-echo -e "Path       : /trojango"
-echo -e "Created    : $hariini"
-echo -e "Expired    : $exp"
+echo -e "Remarks	: ${user}"
+echo -e "Address	: ${domain}"
+echo -e "Port		: ${trgo}"
+echo -e "Key		: ${user}"
+echo -e "Encryption	: none"
+echo -e "Path		: /trojango"
+echo -e "Created	: $hariini"
+echo -e "Expired	: $exp"
 echo -e "========================="
-echo -e "Link TrGo  : ${link}"
+echo -e "Link TrGo	: ${link}"
 echo -e "========================="
-echo -e "	whatsapp		: wa.me/6287728411949 "
-echo -e "	Telegram		: t.me/anuybazoelk "
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "whatsapp	: wa.me/6287728411949 "
+echo -e "Telegram	: t.me/anuybazoelk "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo -e "Script By BZ TUNNELLING"
