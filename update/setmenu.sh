@@ -1,6 +1,4 @@
 #!/bin/bash
-#!/bin/bash
-clear
 GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
@@ -14,47 +12,46 @@ blu='\e[34m'
 op='\e[35m'
 or='\033[1;33m'
 bd='\e[1m'
-color1='\e[031;1m'
-color2='\e[34;1m'
-color3='\e[0m'
+color3='\e[031;1m'
+color1='\e[34;1m'
+color2='\e[0m'
 # COLOR VALIDATION
-RED='\033[0;31m'
-NC='\033[0m'
+BLUE='\033[0;31m'
+RED='\033[0m'
 GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
+CYAN='\033[0;33m'
 BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-#warna
+RED='\033[0;35m'
+GREEN='\033[0;36m'
+CYAN='\033[0;37m'
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Menu System NyariGratisan ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "❇️ Script By : NyariGratisan"
-echo -e "❇️ Exp Script  : Unlimited"
-echo -e "❇️ Version     : Latest Version"
+echo -e "Script By    : BZ TUNNELLING "
+echo -e "Exp          : Unlimited "
+echo -e "Version      : 0.01 "
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Menu System NyariGratisan ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ 1) Add Host Atau Domain Anda                                          "
-echo -e "❇️ 2) Edit Port Vps                                                   "
-echo -e "❇️ 3) Autobackup Data VPS                                                "
-echo -e "❇️ 4) Backup Data VPS                                                "
-echo -e "❇️ 5) Restore Data VPS                                            "
-echo -e "❇️ 6) Webmin Menu                                          "
-echo -e "❇️ 7) Limit Bandwith Speed Server                                          "
-echo -e "❇️ 8) Check Usage of VPS Ram                                                 "
-echo -e "❇️ 9) Reboot VPS                                               "
-echo -e "❇️ 10) Speedtest VPS                                         "
-echo -e "❇️ 11) Displaying System                                            "
-echo -e "❇️ 12) Info Script NyariGratisan                                            "
-echo -e "❇️ 13) Menu                                                "
-echo -e "❇️ 14) EXIT                                                        "
+echo -e " 1) Ganti Domain "
+echo -e " 2) Edit Port "
+echo -e " 3) Autobackup "
+echo -e " 4) Backup Data "
+echo -e " 5) Restore Data "
+echo -e " 6) Webmin Menu "
+echo -e " 7) Limit Bandwith Speed Server "
+echo -e " 8) Check Usage of VPS Ram "
+echo -e " 9) Reboot "
+echo -e " 10) Speedtest "
+echo -e " 11) Displaying System  "
+echo -e " 12) Info Script "
+echo -e " 13) Menu "
+echo -e " 14) EXIT "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ Script By NyariGratisan ⇲             \E[0m"
+echo -e "\E[44;1;39m            ⇱ BZ TUNNELLING ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 read -p "Select From Options [ 1 - 60 ] : " menu
