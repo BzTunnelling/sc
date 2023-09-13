@@ -67,13 +67,13 @@ c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
 d=$((${c} * 1024 * 1024 * 1024))
 
 if [[ ${c} != "0" ]]; then
-  echo "${d}" >/etc/xray-trojan/${user}
+  echo "${d}" >/etc/xray/${user}
 fi
-DATADB=$(cat /etc/xray-trojan/.xray-trojan.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+DATADB=$(cat /etc/xray/.xray.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
 if [[ "${DATADB}" != '' ]]; then
-  sed -i "/\b${user}\b/d" /etc/xray-trojan/.xray-trojan.db
+  sed -i "/\b${user}\b/d" /etc/xray/.xray.db
 fi
-echo "### ${user} ${exp} ${uuid}" >>/etc/xray-trojan/.xray-trojan.db
+echo "### ${user} ${exp} ${uuid}" >>/etc/xray/.xray.db
 CHATID="$CHATID"
 KEY="$KEY"
 TIME="$TIME"
