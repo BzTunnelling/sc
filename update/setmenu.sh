@@ -53,7 +53,9 @@ echo -e " 14) EXIT "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ BZ TUNNELLING ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
+echo -e "Whatsapp      : wa.me/6287728411949 "
+echo -e "Telegram      : t.me/anuybazoelk "
+echo ""
 read -p "Select From Options [ 1 - 60 ] : " menu
 echo -e ""
 case $menu in
