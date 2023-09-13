@@ -1,5 +1,5 @@
 #!/bin/bash
-clear
+clear#!/bin/bash
 GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
@@ -13,37 +13,39 @@ blu='\e[34m'
 op='\e[35m'
 or='\033[1;33m'
 bd='\e[1m'
-color1='\e[031;1m'
-color2='\e[34;1m'
-color3='\e[0m'
+color3='\e[031;1m'
+color1='\e[34;1m'
+color2='\e[0m'
 # COLOR VALIDATION
-RED='\033[0;31m'
-NC='\033[0m'
+BLUE='\033[0;31m'
+RED='\033[0m'
 GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
+CYAN='\033[0;33m'
 BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-#warna
+RED='\033[0;35m'
+GREEN='\033[0;36m'
+CYAN='\033[0;37m'
+echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Menu SSH NyariGratisan ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ Menu SSH BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ 1) Create SSH & OpenVPN Account                                          "
-echo -e "❇️ 2) Create SSH & OpenVPN Trial                                             "
-echo -e "❇️ 3) SSH & OpenVPN Live                                                "
-echo -e "❇️ 4) Check User Login SSH                                                "
-echo -e "❇️ 5) Daftar Member SSH                                            "
-echo -e "❇️ 6) Delete SSH                                          "
-echo -e "❇️ 7) Delete User Expired SSH                                          "
-echo -e "❇️ 8) Set up Autokill SSH                                                 "
-echo -e "❇️ 9) Displays Users Multi Login                                               "
-echo -e "❇️ 10) Restart All Service                                         "
-echo -e "❇️ 11) Menu Utama                                            "
-echo -e "❇️ 12) EXIT                                                        "
+echo -e " 1) Create SSH & OpenVPN Account "
+echo -e " 2) Create SSH & OpenVPN Trial "
+echo -e " 3) SSH & OpenVPN Live "
+echo -e " 4) Check User Login SSH "
+echo -e " 5) Daftar Member SSH "
+echo -e " 6) Delete SSH "
+echo -e " 7) Delete User Expired SSH "
+echo -e " 8) Set up Autokill SSH "
+echo -e " 9) Displays Users Multi Login "
+echo -e " 10) Restart All Service "
+echo -e " 11) Menu Utama "
+echo -e " 12) EXIT "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ Script By NyariGratisan ⇲             \E[0m"
+echo -e "\E[44;1;39m            ⇱ Script By BZ TUNNELLING ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "Whatsapp      : wa.me/6287728411949 "
+echo -e "Telegram      : t.me/anuybazoelk "
 read -p "Select From Options [ 1 - 12 ] : " menu
 echo -e ""
 case $menu in
