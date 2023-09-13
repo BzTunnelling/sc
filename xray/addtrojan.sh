@@ -36,7 +36,7 @@ fi
 clear
 echo "Checking VPS"
 clear
-uuid=$(cat /etc/trojan/uuid.txt)
+uuid=$(cat /etc/xray/uuid.txt)
 source /var/lib/bztunnelling/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
