@@ -78,6 +78,10 @@ echo -e "=============================="
 echo -e "1. Start Autobackup"
 echo -e "2. Stop Autobackup"
 echo -e "=============================="
+echo -e "Script By BZ TUNNELLING "
+echo -e "Whatsapp      : wa.me/6287728411949 "
+echo -e "Telegram      : t.me/anuybazoelk "
+echo ""
 read -rp "Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 start
