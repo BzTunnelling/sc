@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
@@ -13,32 +12,35 @@ blu='\e[34m'
 op='\e[35m'
 or='\033[1;33m'
 bd='\e[1m'
-color1='\e[031;1m'
-color2='\e[34;1m'
-color3='\e[0m'
+color3='\e[031;1m'
+color1='\e[34;1m'
+color2='\e[0m'
 # COLOR VALIDATION
-RED='\033[0;31m'
-NC='\033[0m'
+BLUE='\033[0;31m'
+RED='\033[0m'
 GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
+CYAN='\033[0;33m'
 BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-#warna
+RED='\033[0;35m'
+GREEN='\033[0;36m'
+CYAN='\033[0;37m'
+echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Menu V2RAY NyariGratisan ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ VMESS ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ 1) Create Account V2ray Websocket                                          "
-echo -e "❇️ 2) Delete Account V2ray Websocket                                             "
-echo -e "❇️ 3) Check Account V2ray Live                                                "
-echo -e "❇️ 4) Check User Login V2ray                                                " 
-echo -e "❇️ 5) Perbarui Certificate V2ray                                                "       
-echo -e "❇️ 6) Menu Utama                                            "
-echo -e "❇️ 7) EXIT                                                        "
+echo -e " 1) Create VMESS "
+echo -e " 2) Delete VMESS"
+echo -e " 3) Renew User"
+echo -e " 4) Check User "
+echo -e " 5) Back to Menu "
+echo -e " 6) exit "
+echo -e " 7) RENEW CERT V2RAY "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m            ⇱ Script By NyariGratisan ⇲             \E[0m"
+echo -e "\E[44;1;39m            ⇱ Script By BZ TUNNELLING ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "Whatsapp      : wa.me/6287728411949 "
+echo -e "Telegram      : t.me/anuybazoelk "
+echo ""
 read -p "Select From Options [ 1 - 7 ] : " menu
 echo -e ""
 case $menu in
@@ -55,15 +57,15 @@ renewvmess
 cekvmess
 ;;
 5)
-certv2ray
+menu
 ;;
 6)
 clear
-menu
+exit
 ;;
 7)
 clear
-exit
+certv2ray
 ;;
 *)
 clear
