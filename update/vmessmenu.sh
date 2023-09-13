@@ -57,6 +57,7 @@ renewvmess
 cekvmess
 ;;
 5)
+clear
 menu
 ;;
 6)
