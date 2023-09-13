@@ -87,7 +87,7 @@ KEY="$KEY"
 TIME="$TIME"
 URL="$URL"
 TEXT="<code>====================</code>
-<code>      XRAY/VMESS</code>
+<code>SSH PREMIUM BZ OFFICIAL</code>
 <code>====================</code>
 <code>Remarks   : ${user}
 Domain         : ${domain}
