@@ -28,7 +28,7 @@ CYAN='\033[0;37m'
 # =========================================
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ BZ TUNNELLING ⇲          \E[0m"
+echo -e "\E[44;1;39m            ⇱ BZ TUNNELLING ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e " Script By    : BZ TUNNELLING "
 echo -e " Exp          : Unlimited "
@@ -45,7 +45,7 @@ echo -e " 8)  EDIT PATCH V2RAY                                                  
 echo -e " 9)  CEK V2RAY                                               "
 echo -e " 10)  EXIT                                         "                                                         "
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Script By BZ TUNNELLING ⇲             \E[0m"
+echo -e "\E[44;1;39m            ⇱ Script By BZ TUNNELLING ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "Select From Options [ 1 - 13 ] : " menu
 case $menu in
