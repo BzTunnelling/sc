@@ -24,7 +24,7 @@ $email
 EOF
 fi
 clear
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+echo "Please Wait , Backup Process !!"
 rm -rf /root/backup
 mkdir /root/backup
 cp -r /root/.acme.sh /root/backup/ &> /dev/null
@@ -34,7 +34,7 @@ cp /etc/shadow /root/backup/ &> /dev/null
 cp /etc/gshadow /root/backup/ &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
-cp -r /var/lib/akbarstorevpn/ /root/backup/akbarstorevpn &> /dev/null
+cp -r /var/lib/bztunnelling/ /root/backup/bztunnelling &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cd /root
@@ -62,6 +62,9 @@ Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo
+echo -e "Script By BZ TUNNELLING "
+echo -e "Whatsapp      : wa.me/6287728411949 "
+echo -e "Telegram      : t.me/anuybazoelk "
+echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
