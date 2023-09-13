@@ -29,7 +29,7 @@ fi
 clear
 echo "Checking VPS"
 clear
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/bztunnelling/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
