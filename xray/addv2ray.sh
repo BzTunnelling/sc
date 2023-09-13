@@ -36,7 +36,12 @@ fi
 clear
 echo "Checking VPS"
 clear
+source /var/lib/bztunnelling/ipvps.conf
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 nontls="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -119,7 +124,7 @@ t.me/anuybazoelk
   servername: ${domain}
   network: ws
   ws-opts:
-    path: /vmess
+    path: /
     headers:
       Host: ${domain}
 
@@ -138,7 +143,7 @@ t.me/anuybazoelk
   servername: ${domain}
   network: ws
   ws-opts:
-    path: /vmess
+    path: /
     headers:
       Host: ${domain}
 
@@ -189,7 +194,7 @@ alterId   : 0
 Security  : auto
 network   : ws
 Path      : /
-Name      : vmess-grpc</code>
+Name      : vmess</code>
 <code>====================</code>
 <code> VMESS WS TLS</code>
 <code>====================</code>
