@@ -72,7 +72,7 @@ DATADB=$(cat /etc/trojan-go/.trojan-go.db | grep "^###" | grep -w "${user}" | aw
 if [[ "${DATADB}" != '' ]]; then
   sed -i "/\b${user}\b/d" /etc/trojan-go/.trojan-go.db
 fi
-echo "### ${user} ${exp} ${uuid}" >>/etc/trojan-ho/.trojan-go.db
+echo "### ${user} ${exp} ${uuid}" >>/etc/trojan-go/.trojan-go.db
 CHATID="$CHATID"
 KEY="$KEY"
 TIME="$TIME"
